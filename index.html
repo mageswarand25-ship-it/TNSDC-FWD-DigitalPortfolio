@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>mageswaran Portfolio</title>
+
+  <style>
+
+    /* Google Fonts */
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+      font-family: 'Poppins', sans-serif;
+
+      scroll-behavior: smooth;
+
+    }
+
+    body {
+
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+
+      color: white;
+
+    }
+
+    header {
+
+      width: 100%;
+
+      padding: 15px 20px;
+
+      background: rgba(0, 0, 0, 0.3);
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      z-index: 1000;
+
+      display: flex;
+
+      justify-content: center;
+
+    }
+
+    header nav a {
+
+      color: white;
+
+      text-decoration: none;
+
+      margin: 0 15px;
+
+      font-weight: 600;
+
+      transition: color 0.3s ease;
+
+    }
+
+    header nav a:hover {
+
+      color: #ffce00;
+
+    }
+
+    section {
+
+      padding: 100px 20px;
+
+      min-height: 100vh;
+
+      text-align: center;
+
+    }
+
+    /* Home Section */
+
+    #home {
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+    #home img {
+
+      width: 180px;
+
+      height: 180px;
+
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      border: 6px solid white;
+
+      box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+
+      animation: glow 2s infinite alternate;
+
+    }
+
+    @keyframes glow {
+
+      0% {
+
+        box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+
+      }
+
+      100% {
+
+        box-shadow: 0 0 40px #ff00ff, 0 0 60px #00ffff;
+
+      }
+
+    }
+
+    #home h1 {
+
+      font-size: 2.5rem;
+
+      margin-top: 20px;
+
+      background: linear-gradient(to right, #ff00cc, #00ffff);
+
+      -webkit-background-clip: text;
+
+      color: transparent;
+
+      font-weight: 800;
+
+    }
+
+    #home p {
+
+      margin-top: 10px;
+
+      font-size: 1.2rem;
+
+    }
+
+    /* About Section */
+
+    #about {
+
+      background: rgba(255, 255, 255, 0.1);
+
+      border-radius: 15px;
+
+      padding: 20px;
+
+    }
+
+    #about h2 {
+
+      font-size: 2rem;
+
+      margin-bottom: 15px;
+
+      color: #ffce00;
+
+    }
+
+    #about p {
+
+      font-size: 1rem;
+
+      margin: 8px 0;
+
+    }
+
+    /* Skills Section */
+
+    #skills {
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+    }
+
+    .skills-container {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+      gap: 20px;
+
+      width: 100%;
+
+      max-width: 900px;
+
+      margin-top: 20px;
+
+    }
+
+    .skill-card {
+
+      background: rgba(255, 255, 255, 0.1);
+
+      padding: 20px;
+
+      border-radius: 15px;
+
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    }
+
+    .skill-card:hover {
+
+      transform: translateY(-10px);
+
+      box-shadow: 0 0 30px #ffce00;
+
+    }
+
+    /* Projects Section */
+
+    #projects a {
+
+      color: #00ffff;
+
+      text-decoration: none;
+
+      font-size: 1.2rem;
+
+      font-weight: bold;
+
+      transition: color 0.3s ease;
+
+    }
+
+    #projects a:hover {
+
+      color: #ffce00;
+
+    }
+
+    /* Contact Section */
+
+    #contact form {
+
+      max-width: 500px;
+
+      margin: auto;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 15px;
+
+    }
+
+    input, textarea {
+
+      padding: 10px;
+
+      border: none;
+
+      border-radius: 8px;
+
+      font-size: 1rem;
+
+      outline: none;
+
+    }
+
+    button {
+
+      background: linear-gradient(45deg, #ff00cc, #00ffff);
+
+      color: white;
+
+      padding: 12px;
+
+      font-size: 1rem;
+
+      font-weight: bold;
+
+      border: none;
+
+      border-radius: 8px;
+
+      cursor: pointer;
+
+      transition: transform 0.3s ease;
+
+    }
+
+    button:hover {
+
+      transform: scale(1.05);
+
+    }
+
+    footer {
+
+      text-align: center;
+
+      padding: 15px;
+
+      background: rgba(0, 0, 0, 0.3);
+
+      margin-top: 40px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <nav>
+
+      <a href="#home">Home</a>
+
+      <a href="#about">About</a>
+
+      <a href="#skills">Skills</a>
+
+      <a href="#projects">Projects</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+  </header>
+
+  <section id="home">
+
+    <img src="mageswaran.jpg" alt="mageswaran" />
+
+    <h1>I'm mageswaran</h1>
+
+    <p>Welcome to my colorful portfolio!</p>
+
+  </section>
+
+  <section id="about">
+
+    <h2>About Me</h2>
+
+    <p><b>Name:</b> mageswaran</p>
+
+    <p><b>Department:</b> B.Sc Computer Science</p>
+
+    <p><b>College:</b> Merit Haji Ismail Sahib Arts & Science College</p>
+
+    <p><b>University:</b> Thiruvalluvar University, Vellore</p>
+
+    <p><b>Roll No:</b> 36624U18010</p>
+
+    <p><b>Naan Mudhalvan ID:</b>B1CAC82DEE307A8B6A0456E61C0AAD06 </p>
+
+    <p><b>GitHub:</b> <a href="https://github.com/mageswarand25-ship-it/TNSDC-FWD-DigitalPortfolio.git" target="_blank">Click Here</a></p>
+
+    <p><b>Email:</b>mageswarand@25gmail. com</p>
+
+  </section>
+
+  <section id="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="skill-card">
+
+        <h3>Python</h3>
+
+        <p>Proficient in Python with experience in building projects and solving problems.</p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <h3>C++</h3>
+
+        <p>Strong in C++ programming, especially in data structures and algorithms.</p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <h3>HTML</h3>
+
+        <p>Skilled in creating responsive and modern websites using HTML5 & CSS3.</p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <h3>Data Structures</h3>
+
+        <p>Expertise in arrays, linked lists, stacks, queues, trees, and graphs.</p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <h3>Problem Solving</h3>
+
+        <p>Ability to solve coding challenges efficiently with optimized solutions.</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="projects">
+
+    <h2>My Projects</h2>
+
+    <p>Check out my GitHub: 
+
+      <a href="https://github.com/mageswarand25-ship-it/TNSDC-FWD-DigitalPortfolio.git" target="_blank">
+
+        Click Here
+
+      </a>
+
+    </p>
+
+  </section>
+
+  <section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <form action="mailto:mageswarand25@gmail.com.com" method="post" enctype="text/plain">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+
+  </section>
+
+  <footer>
+
+    <p>© 2025 mageswaran| All Rights Reserved</p>
+
+  </footer>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
